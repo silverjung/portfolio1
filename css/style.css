@@ -26,9 +26,12 @@
     --weight-bold: 700;
     --weight-semi-bold: 600;
     --weight-regular: 400;
+
      /* Size */
     --size-border-radius: 5px;
 
+    /* Annimation */
+    --animation-duration: 300ms;
   }
 
   /* Universal tags */
@@ -39,6 +42,7 @@
   body{
     margin: 0;
     cursor: default;
+    font-family: 'Nanum Gothic Coding', monospace;
   }
 
   a{
@@ -50,17 +54,26 @@
     list-style: none;
     padding-left: 0;
   }
+
+  button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
   /* Typography */
   
   h1 {
     font-size: var(--font-large);
+    font-family: 'Noto Serif', serif;
     font-weight: var(--weight-bold);
     color: var(--color-black);
-    margin: 16px 0px;
+    margin: 25px 0px;
   }
   
   h2 {
     font-size: var(--font-medium);
+    font-family: 'Noto Serif', serif;
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -84,7 +97,7 @@
   #navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-blue);
+    background-color: #ffdad5;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
@@ -106,9 +119,119 @@
   }
   
   .navbar__menu__item.active{
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-pink);
   }
 
   .navbar__menu__item:hover{
     font-weight: var(--weight-semi-bold);
   }
+
+  /* Home */
+  #home{
+    padding: 100px;
+    text-align: center;
+    background: url("../imgs/home_background_4.png") center/cover no-repeat;
+    font-family: 'Noto Serif', serif;
+  }
+
+  .home__avatar{
+    width: 400px;
+    height: 400px;
+    border-radius: 280px / 300px;
+    margin: 20px;
+    border: 10px solid #F1C7C2;
+  }
+
+.home__title{
+  color: #FFDAD5;
+  background-color:#DF4E39 ;
+  font-size: 30px;
+  padding: 20px;
+  width: 400px;
+  margin: 30px auto;
+  transform: rotate(-5deg);
+}
+.home__contact{
+  color: #FFDAD5;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  font-family: 'Noto Serif', serif;
+  margin: 30px;
+  padding: 8px 12px;
+  background-color: #DF4E39;
+  border-radius: 10px;
+}
+
+/* Section common */
+.section{
+  padding: 50px;
+  line-height: 30px;
+  text-align: center;
+  max-width: 1200px;
+  word-spacing: -3px;
+  margin: auto;
+}
+
+/* About */
+.about__majors{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major{
+width: 330px;
+font-size: 15px;
+}
+
+.major__icon{
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon i{
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i{
+  color: #F1C7C2;
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title, .major__description{
+  color: var(--color-dark-grey);
+}
+ .major__description{
+  font-size: var(--font-small);
+ }
+
+ .job{
+  display: flex;
+  align-items: center;
+ }
+  .job img{
+    width: 65px;
+  }
+   .job__description{
+    margin: 0 16px;
+    text-align: left;
+   }
+
+   .job__name, .job__period{
+    color: var(--color-light-grey);
+   }
+
+   .job__name{
+    font-size: var(--font-small);
+   }
+
+   .job__period{
+    font-size: var(--font-micro);
+   }
