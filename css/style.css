@@ -96,16 +96,25 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #ffdad5;
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 6px 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark{
+  background-color: #ffdad5;
+  padding: 4px;
 }
 
 .navbar__logo>img {
-  height: 80px;
+  height: 60px;
+  margin: 0 10px;
 }
 
 .navbar__menu {
@@ -129,8 +138,8 @@ p {
 
 .navbar__toggle-btn{
   position: absolute;
-  top: 40px;
-  right: 32px;
+  top: 27px;
+  right: 28px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -138,7 +147,8 @@ p {
 
 /* Home */
 #home {
-  padding: 100px;
+  padding: 50px;
+  padding-top: 100px;
   text-align: center;
   background: url("../imgs/home_background_4.png") center/cover no-repeat;
   font-family: 'Noto Serif', serif;
@@ -178,7 +188,6 @@ p {
   padding: 50px;
   line-height: 30px;
   text-align: center;
-
   word-spacing: -3px;
   margin: auto;
 }
@@ -466,7 +475,7 @@ p {
   #home{
     padding: 25px;
   }
-  
+
   .home__title{
     width: 290px;
   }
